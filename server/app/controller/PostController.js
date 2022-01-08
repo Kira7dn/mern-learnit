@@ -92,8 +92,8 @@ class LoginController {
     }
   }
 
-  // @route PUT api/posts
-  // @desc Update post
+  // @route DELETE api/posts/:id
+  // @desc Delete post
   // @access private
   async delete(req, res) {
     try {

@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     
-    "username": "jim",
+    "username": "replican",
     "password": "password"
 }
 
@@ -13,7 +13,7 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "username": "jim",
+    "username": "jim2",
     "password": "password"
 }
 
@@ -52,3 +52,31 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQwN
 ###
 DELETE http://localhost:5000/api/posts/61d1295d4db5a2d75a2d9a64
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQwNjg0YjI1NmNjNGZjODIwNmVlZmMiLCJpYXQiOjE2NDExMTc5ODd9.79igqGz2vzsIRnymd4SurMeHkpnBZ3fuemVF-gRJpLM
+
+### 
+
+POST http://localhost:5000/api/friend/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQwNjg0YjI1NmNjNGZjODIwNmVlZmMiLCJpYXQiOjE2NDExMTc5ODd9.79igqGz2vzsIRnymd4SurMeHkpnBZ3fuemVF-gRJpLM
+
+
+{
+  "friendName": "jim2"
+}
+### 
+
+PUT http://localhost:5000/api/friend/61d96d9625ab6ecaa86aeb3e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NjYyMDcwYzE1ZjEzMDY4OGI1YzEiLCJpYXQiOjE2NDE2Mzg3NTN9.eOP3pHWVdrOFvC79We9sugPYWNfCt3rvfqWw-En5e_o
+
+### 
+
+DELETE http://localhost:5000/api/friend/61d9734225ab6ecaa879926a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDE2NDA3OTF9.bXkcXECchRsDt8oRCovna7y4SrlYA2ZLHiTlfQBImo8
+
+### 
+
+GET http://localhost:5000/api/friend/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDE2NDE5ODJ9.zqMrAYzYnLtaMAd-PDGKYDAMb24GaEEggZNpYKF__xw
