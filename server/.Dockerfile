@@ -3,7 +3,7 @@
 FROM node:17-slim
 
 # Create and change to the app directory.
-WORKDIR /usr/src/app
+WORKDIR /usr/server/app
 
 # Copy application dependency manifests to the container image.
 # A wildcard is used to ensure both package.json AND package-lock.json are copied.
@@ -19,4 +19,4 @@ RUN npm install --production
 COPY . ./
 
 # Run the web service on container startup.
-CMD ["node", "server/index.js"]
+CMD ["node", "index.js"]
