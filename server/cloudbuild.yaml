@@ -1,0 +1,32 @@
+# steps:
+#   # Docker Build
+#   - name: 'gcr.io/cloud-builders/docker'
+#     args: ['build', '-t', 
+#            'us-central1-docker.pkg.dev/vast-incline-336710/my-docker-repo/myimage', 
+#            '.']
+
+# In this directory, run the following command to build this builder.
+# $ gcloud builds submit . --config=cloudbuild.yaml
+
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcloud-slim', '--tag=gcr.io/vast-incline-336710/gcloud-slim', '-f', 'Dockerfile.slim', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcr.io/vast-incline-336710/gcloud', '-f', 'Dockerfile', '.']
+
+# Simple sanity check: invoke the new gcloud container to confirm that it was
+# built correctly.
+- name: 'gcr.io/vast-incline-336710/gcloud'
+  args: ['info']
+- name: 'gcr.io/vast-incline-336710/gcloud-slim'
+  args: ['info']
+
+# Confirm that auth is piped through correctly.
+- name: 'gcr.io/vast-incline-336710/gcloud'
+  args: ['builds', 'list']
+
+images:
+- 'gcr.io/vast-incline-336710/gcloud'
+- 'gcr.io/vast-incline-336710/gcloud-slim'
+
+timeout: 2400s
