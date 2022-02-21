@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     
-    "username": "replican",
+    "username": "kira7dn11",
     "password": "password"
 }
 
@@ -13,7 +13,7 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "username": "jim2",
+    "username": "kira7dn11",
     "password": "password"
 }
 
@@ -57,26 +57,114 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQwN
 
 POST http://localhost:5000/api/friend/add
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQwNjg0YjI1NmNjNGZjODIwNmVlZmMiLCJpYXQiOjE2NDExMTc5ODd9.79igqGz2vzsIRnymd4SurMeHkpnBZ3fuemVF-gRJpLM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWU4MjdiMDc2NzkyNDgyOGQ4NWEwNzIiLCJpYXQiOjE2NDMzMzM0NTN9.87jir9BFdjsqFUtn1ZXUIG-H7orCCySOvsUTIKE5Ngc
 
 
 {
-  "friendName": "jim2"
+  "friendId": "61d94c79ed54d638458da0a0"
 }
 ### 
 
-PUT http://localhost:5000/api/friend/61d96d9625ab6ecaa86aeb3e
+PUT http://localhost:5000/api/friend/61dd6670d4aa0dc7d95aee38
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NjYyMDcwYzE1ZjEzMDY4OGI1YzEiLCJpYXQiOjE2NDE2Mzg3NTN9.eOP3pHWVdrOFvC79We9sugPYWNfCt3rvfqWw-En5e_o
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ1OGIyNDgxNmE3ODljMjBmOWU1ZWEiLCJpYXQiOjE2NDE4OTk2NTd9.PanQlhdcysjKxsipfFpDQZewry-aMrd07tDtemb9lgw
 
 ### 
 
-DELETE http://localhost:5000/api/friend/61d9734225ab6ecaa879926a
+DELETE http://localhost:5000/api/friend/61dd6670d4aa0dc7d95aee38
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDE2NDA3OTF9.bXkcXECchRsDt8oRCovna7y4SrlYA2ZLHiTlfQBImo8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDIwNTkxNzN9.oILqzxWzVF8po7M9MnQbJkOkRJsPxxH-Q64KSx7pl1Y
 
 ### 
 
 GET http://localhost:5000/api/friend/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDE2NDE5ODJ9.zqMrAYzYnLtaMAd-PDGKYDAMb24GaEEggZNpYKF__xw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDIwNTkxNzN9.oILqzxWzVF8po7M9MnQbJkOkRJsPxxH-Q64KSx7pl1Y
+
+### 
+
+GET http://localhost:5000/api/friend/search
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDE4ODc2NzF9.bwQjEvvZSFRZI00vLO-_L3i98e0TL2IigxF5rQL-Ajg
+
+{
+  "search": "0399945440"
+}
+
+
+# Space
+###
+GET http://localhost:5000/api/spaces
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDIzODkwNDZ9.OTfbbMrDXXUc24FAiEvXwA4fn3ViwcAwt4XOlAT9Z6M
+
+
+### 
+
+POST http://localhost:5000/api/spaces
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQxMmNiMzk0ZmIzYTMxNDUxOWQ5YzYiLCJpYXQiOjE2NDE0MzE2ODJ9._0W2izignVIB4VDl-9Hngg2BcaPuUgZUpHIZ_iuMCMo
+
+
+{
+  "title": "Labor Safety",
+  "description": "Special support to improve working conditions in small enterprises, agriculture and handicraft commune",
+  "members": ["61e024e4b086ae00078f7983","61e02625b086ae000792a179"]
+}
+
+###
+PUT http://localhost:5000/api/spaces/61e19cb5cd0ca44dd4098577
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQxMmNiMzk0ZmIzYTMxNDUxOWQ5YzYiLCJpYXQiOjE2NDE0MzE2ODJ9._0W2izignVIB4VDl-9Hngg2BcaPuUgZUpHIZ_iuMCMo
+
+{
+  "title": "Labor Safety",
+  "rank": 4,
+  "description": "Special support to improve working conditions in small enterprises, agriculture and handicraft commune",
+  "members": ["61d265d695f405367c237e31","61d265d695f405367c237e31","61dffa6e7c7882625e5beb37"]
+}
+
+###
+DELETE http://localhost:5000/api/spaces/61e19dcf03adaf95782eb7a8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQxMmNiMzk0ZmIzYTMxNDUxOWQ5YzYiLCJpYXQiOjE2NDE0MzE2ODJ9._0W2izignVIB4VDl-9Hngg2BcaPuUgZUpHIZ_iuMCMo
+
+### 
+
+POST http://localhost:5000/api/projects
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDIzODkwNDZ9.OTfbbMrDXXUc24FAiEvXwA4fn3ViwcAwt4XOlAT9Z6M
+
+{
+  "title": "React",
+  "description": "react",
+  "deadline": "2020/02/19",
+  "leader" : "61e025241f66bf7561639e82",
+  "members": ["61e82790767924828d85a06f","61e827b0767924828d85a072"],
+  "children": ["61e817857695e1586acd5fa0","61e813ce9d389d666a0494d9"],
+  "space":["61e7c9685f7f48089cc2b180"]
+}
+
+
+### 
+
+PUT http://localhost:5000/api/projects/61ea58239455a0d8ef727b36
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDIzODkwNDZ9.OTfbbMrDXXUc24FAiEvXwA4fn3ViwcAwt4XOlAT9Z6M
+
+{
+  "title": "React",
+  "description": "reacsdsdsdt",
+  "deadline": "2020/02/19",
+  "leader" : "61d94c79ed54d638458da0a0",
+  "members": ["61e82790767924828d85a06f","61e827b0767924828d85a072","61d94c79ed54d638458da0a0"],
+  "children": ["61e817857695e1586acd5fa0","61e813ce9d389d666a0494d9"],
+  "space":["61e5393f7d5c7b2a8bb634cd","61e581ec7d5c7b2a8bb636f8"]
+}
+
+###
+GET http://localhost:5000/api/projects/?spaceId=61e5393f7d5c7b2a8bb634cd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDI3NTYyMjF9.dM7JPQgQpem9fm53Y7GWlQHxC8cROs0-paS9v2ouhtw
+
+
+###
+GET http://localhost:5000/api/projects/?spaceId=61e5393f7d5c7b2a8bb634cd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ5NGM3OWVkNTRkNjM4NDU4ZGEwYTAiLCJpYXQiOjE2NDI3NTYyMjF9.dM7JPQgQpem9fm53Y7GWlQHxC8cROs0-paS9v2ouhtw
